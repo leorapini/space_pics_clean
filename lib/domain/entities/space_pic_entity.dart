@@ -5,14 +5,12 @@ class SpacePicEntitity extends Equatable {
   final String explanation;
   final String title;
   final String imgUrl;
-  final String author;
 
   const SpacePicEntitity({
     required this.date,
     required this.explanation,
     required this.title,
     required this.imgUrl,
-    required this.author,
   });
 
   @override
@@ -21,6 +19,5 @@ class SpacePicEntitity extends Equatable {
         explanation,
         title,
         imgUrl,
-        author,
       ];
 }
