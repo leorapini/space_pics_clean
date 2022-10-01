@@ -1,10 +1,9 @@
 import '../../domain/entities/space_pic_entity.dart';
-import '../helpers/date_conversion.dart';
 import '../http/http_error.dart';
 
 class RemoteSpacePicModel {
   final String? copyright;
-  final DateTime date;
+  final String date;
   final String explanation;
   final String hdurl;
   final String mediaType;
@@ -28,17 +27,17 @@ class RemoteSpacePicModel {
       throw HttpError.invalidData;
     }
     return RemoteSpacePicModel(
-        date: fromStringToDate(json['date']),
+        date: json['date'],
         explanation: json['explanation'],
         hdurl: json['hdurl'],
-        mediaType: json['mediaType'],
-        serviceVersion: json['serviceVersion'],
+        mediaType: json['media_type'],
+        serviceVersion: json['service_version'],
         title: json['title'],
         url: json['url']);
   }
 
   SpacePicEntitity toEntity() => SpacePicEntitity(
-        date: date,
+        date: DateTime.parse(date),
         explanation: explanation,
         title: title,
         imgUrl: url,
