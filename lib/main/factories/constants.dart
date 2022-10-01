@@ -1,0 +1,1 @@
+const int numberOfDaysPerRequest = 5; // Each day corresponds to one SpacePicEntitiy per request
