@@ -1,3 +1,5 @@
+import 'dart:convert';
+
 import 'package:http/http.dart';
 
 import '../data/http/http_client.dart';
@@ -9,7 +11,7 @@ class HttpAdapter implements HttpClient {
   HttpAdapter(this.client);
 
   @override
-  Future<Response> request({
+  Future<dynamic> request({
     required String url,
   }) async {
     late Response res;
@@ -19,7 +21,7 @@ class HttpAdapter implements HttpClient {
       throw HttpError.serverError;
     }
     if (res.statusCode == 200) {
-      return res;
+      return jsonDecode(res.body);
     } else if (res.statusCode == 400) {
       throw HttpError.badRequest;
     } else if (res.statusCode == 401) {
