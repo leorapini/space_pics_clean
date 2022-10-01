@@ -7,7 +7,7 @@ import 'package:space_pics/data/usecases/remote_load_space_pics.dart';
 import 'package:space_pics/domain/entities/space_pic_entity.dart';
 import 'package:space_pics/domain/helpers/domain_error.dart';
 
-import '../../mocks/api_mock.dart';
+import '../mocks/api_mock.dart';
 
 class MockHttpClient extends Mock implements HttpClient {}
 
