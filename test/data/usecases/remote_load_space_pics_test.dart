@@ -49,6 +49,12 @@ void main() {
           explanation: apiValidResultMock[0]['explanation'],
           title: apiValidResultMock[0]['title'],
           imgUrl: apiValidResultMock[0]['url'],
+        ),
+        SpacePicEntitity(
+          date: DateTime.parse(apiValidResultMock[1]['date']),
+          explanation: apiValidResultMock[1]['explanation'],
+          title: apiValidResultMock[1]['title'],
+          imgUrl: apiValidResultMock[1]['url'],
         )
       ],
     );
@@ -72,14 +78,15 @@ void main() {
   });
 
   test('should throw UnexpectedError on 500', () async {
-    when(() => mockHttpClient.request(url: url)).thenThrow(HttpError.serverError);
+    when(() => mockHttpClient.request(url: url))
+        .thenThrow(HttpError.serverError);
 
     final future = sut.load();
 
     expect(future, throwsA(DomainError.unexpected));
   });
 
-    test('should throw AccessDeniedError on 403', () async {
+  test('should throw AccessDeniedError on 403', () async {
     when(() => mockHttpClient.request(url: url)).thenThrow(HttpError.forbidden);
 
     final future = sut.load();
