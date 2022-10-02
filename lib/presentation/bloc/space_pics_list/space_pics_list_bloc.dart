@@ -2,7 +2,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../../data/usecases/remote_load_space_pics.dart';
 import '../../../domain/entities/space_pic_entity.dart';
-import '../../../main/factories/load_space_pics_factory.dart';
+import '../../../main/factories/remote_load_space_pics_factory.dart';
 import 'space_pics_list_event.dart';
 import 'space_pics_list_state.dart';
 
