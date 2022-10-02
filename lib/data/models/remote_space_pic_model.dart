@@ -5,7 +5,7 @@ class RemoteSpacePicModel {
   final String? copyright;
   final String date;
   final String explanation;
-  final String hdurl;
+  final String? hdurl;
   final String mediaType;
   final String serviceVersion;
   final String title;
@@ -15,7 +15,7 @@ class RemoteSpacePicModel {
     this.copyright,
     required this.date,
     required this.explanation,
-    required this.hdurl,
+    this.hdurl,
     required this.mediaType,
     required this.serviceVersion,
     required this.title,
@@ -27,9 +27,10 @@ class RemoteSpacePicModel {
       throw HttpError.invalidData;
     }
     return RemoteSpacePicModel(
+        copyright: json['copyright'] ?? json['copyright'],
         date: json['date'],
         explanation: json['explanation'],
-        hdurl: json['hdurl'],
+        hdurl: json['hdurl'] ?? json['hdurl'],
         mediaType: json['media_type'],
         serviceVersion: json['service_version'],
         title: json['title'],

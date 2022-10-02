@@ -1,8 +1,8 @@
 import 'package:intl/intl.dart';
-import 'package:space_pics/domain/helpers/domain_error.dart';
-import 'package:space_pics/main/factories/constants.dart';
-import 'package:space_pics/validation/validators/date_validation.dart';
 
+import '../../domain/helpers/domain_error.dart';
+import '../../validation/validators/date_validation.dart';
+import 'constants.dart';
 import 'date_factory.dart';
 
 class ApiUrlFactory {

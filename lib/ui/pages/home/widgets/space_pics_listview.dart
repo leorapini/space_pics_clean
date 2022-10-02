@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 import '../../../../domain/entities/space_pic_entity.dart';
+import '../../../widgets/state_error_widget.dart';
+import 'space_pics_list_item.dart';
 
 class SpacePicsListView extends StatelessWidget {
   final List<SpacePicEntitity> spacePicsList;
@@ -16,13 +18,10 @@ class SpacePicsListView extends StatelessWidget {
         padding: EdgeInsets.zero,
         itemCount: spacePicsList.length,
         itemBuilder: ((context, i) {
-          if (spacePicsList.isNotEmpty) {
-            return Padding(
-              padding: const EdgeInsets.all(20),
-              child: Text(spacePicsList[i].title),
-            );
+          if (spacePicsList.isEmpty) {
+            return const StateErrorWidget(errorMessage: 'List is Empty');
           } else {
-            return const Text('Empty');
+            return SpacePicListItem(spacePic: spacePicsList[i]);
           }
         }),
       ),
