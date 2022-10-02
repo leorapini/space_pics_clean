@@ -11,20 +11,21 @@ class SpacePicsListView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Expanded(
       child: ListView.builder(
-          shrinkWrap: true,
-          scrollDirection: Axis.vertical,
-          padding: EdgeInsets.zero,
-          itemCount: spacePicsList.length,
-          itemBuilder: ((context, i) {
-            if (spacePicsList.isNotEmpty) {
-              return Padding(
-                padding: const EdgeInsets.all(20),
-                child: Text(spacePicsList[i].title),
-              );
-            } else {
-              return const Text('Empty');
-            }
-          })),
+        shrinkWrap: true,
+        scrollDirection: Axis.vertical,
+        padding: EdgeInsets.zero,
+        itemCount: spacePicsList.length,
+        itemBuilder: ((context, i) {
+          if (spacePicsList.isNotEmpty) {
+            return Padding(
+              padding: const EdgeInsets.all(20),
+              child: Text(spacePicsList[i].title),
+            );
+          } else {
+            return const Text('Empty');
+          }
+        }),
+      ),
     );
   }
 }
