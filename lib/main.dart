@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import 'di.dart' as locator;
-import 'presentation/bloc/space_pics_list/space_pics_list_bloc.dart';
-import 'ui/pages/home_page.dart';
+import 'di.dart' as injection;
+import 'presentation/bloc/home_bloc.dart';
+import 'ui/pages/home/home_page.dart';
 
 void main() {
-  locator.init();
+  WidgetsFlutterBinding.ensureInitialized();
+  injection.init();
   runApp(const App());
 }
 
@@ -17,7 +18,7 @@ class App extends StatelessWidget {
   Widget build(BuildContext context) {
     return MultiBlocProvider(
       providers: [
-        BlocProvider(create: (_) => locator.locator<SpacePicsListBloc>()),
+        BlocProvider(create: (_) => injection.locator<HomeBloc>()),
       ],
       child: MaterialApp(
         title: 'Space Pics',
