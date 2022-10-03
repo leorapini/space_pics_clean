@@ -23,7 +23,7 @@ class RemoteSpacePicModel {
   });
 
   factory RemoteSpacePicModel.fromJson(Map json) {
-    if (!json.keys.toSet().containsAll(['explanation', 'title', 'url'])) {
+    if (!json.keys.toSet().containsAll(['explanation', 'title', 'url', 'date'])) {
       throw HttpError.invalidData;
     }
     return RemoteSpacePicModel(
