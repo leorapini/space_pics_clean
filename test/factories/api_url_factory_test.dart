@@ -21,12 +21,6 @@ void main() {
     randomLateInvalidDate = makeEarlyInvalidDate();
   });
 
-  test('should generate correct url based on valid date', () {
-    final result = ApiUrlFactory.createUrlFromDate(validDate);
-
-    expect(result, validUrl);
-  });
-
   test('should generate correct url based on random valid date', () {
     final result = ApiUrlFactory.createUrlFromDate(randomValidDate);
     final DateFormat formatter = DateFormat(apiDateFormat);
