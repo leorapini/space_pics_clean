@@ -1,7 +1,7 @@
 import 'package:get_it/get_it.dart';
 
 import 'data/usecases/remote_load_space_pics.dart';
-import 'infra/http_adapter.dart';
+import 'infra/http/http_adapter.dart';
 import 'presentation/bloc/home_bloc.dart';
 
 final locator = GetIt.instance;

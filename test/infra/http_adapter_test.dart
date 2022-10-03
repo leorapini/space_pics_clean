@@ -5,7 +5,7 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:http/http.dart';
 import 'package:mocktail/mocktail.dart';
 import 'package:space_pics/data/http/http_error.dart';
-import 'package:space_pics/infra/http_adapter.dart';
+import 'package:space_pics/infra/http/http_adapter.dart';
 
 class MockClient extends Mock implements Client {}
 
