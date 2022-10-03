@@ -1,7 +1,7 @@
 import '../constants/constants.dart';
 
 class DateFactory {
-  DateTime _currentDate;
+  final DateTime _currentDate;
 
   DateFactory(this._currentDate);
 
