@@ -1,4 +1,4 @@
-import 'package:space_pics/main/factories/constants.dart';
+import '../constants/constants.dart';
 
 class DateFactory {
   DateTime _currentDate;

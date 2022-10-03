@@ -2,7 +2,7 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:intl/intl.dart';
 import 'package:space_pics/domain/helpers/domain_error.dart';
 import 'package:space_pics/main/factories/api_url_factory.dart';
-import 'package:space_pics/main/factories/constants.dart';
+import 'package:space_pics/main/constants/constants.dart';
 
 import 'mocks/api_url_mock.dart';
 

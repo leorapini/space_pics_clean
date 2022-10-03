@@ -16,6 +16,6 @@ void init() {
         httpClient: locator(),
       ));
 
-  // Http
+  // http
   locator.registerLazySingleton(() => HttpAdapter(locator()));
 }

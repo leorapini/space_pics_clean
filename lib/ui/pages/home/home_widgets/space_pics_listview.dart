@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:space_pics/presentation/bloc/home_event.dart';
 
 import '../../../../domain/entities/space_pic_entity.dart';
 import '../../../../presentation/bloc/home_bloc.dart';
+import '../../../../presentation/bloc/home_event.dart';
 import '../../../../presentation/bloc/home_state.dart';
-import '../../../widgets/state_error_widget.dart';
+import '../../../shared_widgets/state_error_widget.dart';
 import 'space_pics_list_item.dart';
 
 class SpacePicsListView extends StatefulWidget {
@@ -29,9 +29,7 @@ class _SpacePicsListViewState extends State<SpacePicsListView> {
       double delta = MediaQuery.of(context).size.height * 0.20;
       if (maxScroll - currentScroll <= delta) {
         context.read<HomeBloc>().add(LoadNextBatch(widget.spacePicsList));
-        setState(() {
-          
-        });
+        setState(() {});
       }
     });
   }
@@ -44,7 +42,7 @@ class _SpacePicsListViewState extends State<SpacePicsListView> {
           controller: _scrollController,
           shrinkWrap: true,
           scrollDirection: Axis.vertical,
-          padding: const EdgeInsets.symmetric(vertical: 20.0),
+          padding: EdgeInsets.zero,
           itemCount: widget.spacePicsList.length,
           itemBuilder: ((context, i) {
             if (widget.spacePicsList.isEmpty) {

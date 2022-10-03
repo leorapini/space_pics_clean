@@ -3,8 +3,8 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../../../../presentation/bloc/home_state.dart';
 import '../../../../presentation/bloc/home_bloc.dart';
-import '../../../widgets/loading_widget.dart';
-import '../../../widgets/state_error_widget.dart';
+import '../../../shared_widgets/loading_widget.dart';
+import '../../../shared_widgets/state_error_widget.dart';
 import 'space_pics_listview.dart';
 
 class SpacePicsList extends StatelessWidget {
