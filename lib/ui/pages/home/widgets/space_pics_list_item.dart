@@ -9,13 +9,14 @@ class SpacePicListItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(20),
+      padding: const EdgeInsets.only(top: 50, left: 20, right: 20),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
         Text(spacePic.title),
         Text(spacePic.date.toString()),
+        Text(spacePic.imgUrl),
       ]),
     );
   }

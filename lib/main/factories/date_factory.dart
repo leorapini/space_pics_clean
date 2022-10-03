@@ -8,7 +8,5 @@ class DateFactory {
   DateTime get current => _currentDate;
   DateTime get xDaysAgo =>
       _currentDate.subtract(const Duration(days: numberOfDaysPerRequest));
-  set newCurrentDate(DateTime newDate) {
-    _currentDate = newDate.subtract(const Duration(days: 1));
-  }
+  DateTime get minusOneDay => _currentDate.subtract(const Duration(days: 1));
 }
