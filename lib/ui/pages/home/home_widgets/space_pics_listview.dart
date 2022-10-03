@@ -42,7 +42,7 @@ class _SpacePicsListViewState extends State<SpacePicsListView> {
           controller: _scrollController,
           shrinkWrap: true,
           scrollDirection: Axis.vertical,
-          padding: EdgeInsets.zero,
+          padding: const EdgeInsets.symmetric(horizontal: 20.0),
           itemCount: widget.spacePicsList.length,
           itemBuilder: ((context, i) {
             if (widget.spacePicsList.isEmpty) {

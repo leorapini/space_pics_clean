@@ -17,16 +17,13 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       appBar: const MyAppBar(),
       extendBodyBehindAppBar: true,
-      body: Container(
-        padding: const EdgeInsets.all(20),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: const [
-            AddVerticalSpace(30),
-            SpacePicsList(),
-          ],
-        ),
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: const [
+          AddVerticalSpace(30),
+          SpacePicsList(),
+        ],
       ),
     );
   }
