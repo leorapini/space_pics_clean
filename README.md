@@ -17,17 +17,17 @@ For dependencies please check the pubspeck.yaml file.
 
 This app has been developed with a focus on mobile (iOS / Android) and Web.
 
-'''bash
+```
 flutter run
-'''
+```
 
 ## Testing
 
 To run all tests, inside of the repository directory, type the following command in your terminal:
 
-'''bash
+```
 flutter test
-'''
+```
 
 ## Future Improvements
 
