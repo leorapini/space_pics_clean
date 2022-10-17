@@ -31,7 +31,7 @@ flutter test
 
 ## Future Improvements
 
-- Improve mobile and web UI
+- Improve mobile and web UI (this was just a sample)
 - Add loader indicator while the infinite scroll is making another api request
 - Add presentation (bloc) and ui tests
 - Add integration tests
